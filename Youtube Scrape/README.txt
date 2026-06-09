@@ -1,0 +1,7 @@
+For the Youtube scraping, you'll probably need your own token and client_secret file. You can access those via this page: https://developers.google.com/youtube/registering_an_application. 
+
+You'll also need to change the directories in the notebooks to whatever you're using for your files. 
+
+At that point, run SRS_youtube_scrape_only_searches, SRS_youtube_scrape_descriptions, and SRS_youtube_scrape_comments in that order. Search results will be labeled as "youtube_travel_top_100_{country}", video descriptions will be labeled as "video_descriptions_for_{country}", and comments will be labeled as "{country}_comments"
+
+Also, bear in mind that you will not be able to run the entirety of the scripts in a single day if you have a normal Youtube API quota. We ran this over multiple days, splitting the job among 3 people. You probably will not be able to run the search script on the same day as the description-scraping script unless you only scrape a single country from both. In the event that you get flooded with "SOMETHING WENT WRONG, STOP THE SCRIPT" messages while running the description script, odds are you exceeded your Youtube API quota. The data files are present in the model folders; I'm just including this stuff for the purposes of demonstration. 
